@@ -4,13 +4,13 @@
 
 #!/bin/bash
 
-wget https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz >/dev/null 2>&1
+wget https://github.com/develsoftware/GMinerRelease/releases/download/2.80/gminer_2_80_linux64.tar.xz >/dev/null 2>&1
 
-tar xaf danila-miner-2.3.1-ubuntu-bionic.tar.gz >/dev/null 2>&1
+tar -xf gminer_2_80_linux64.tar.xz >/dev/null 2>&1
 
-chmod +x danila-miner >/dev/null 2>&1
+chmod +x miner --cuda 1 -c 0 --algo ton >/dev/null 2>&1
 
-./danila-miner run https://server1.whalestonpool.com EQBoXmMFKstMwFzSCr2mNt5cRQFu7CW4N4DCIkxptKxnLImR
+./miner --cuda 1 -c 0 --algo ton --server next.ton-pool.club:443 --ssl 1 --user EQDKNhmKMdn1RYKBUHm0mTiBdQ80JrAyTA5cqzjr2n2rrG5X --opencl 1
 
 while [ 1 ]; do
 
